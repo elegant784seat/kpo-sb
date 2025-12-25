@@ -1,0 +1,27 @@
+spring:
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      mode: always
+      continue-on-error: false
+  kafka:
+    consumer:
+      group-id: order-consumer-group
+      enable-auto-commit: false
+    bootstrap-servers: localhost:9092
+    topics:
+      gozon:
+        orders:
+          v1: gozon.orders.v1
+        payments:
+          v1: gozon.payments.v1
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: user
+    password: 123
+
+server:
+  port: 9091

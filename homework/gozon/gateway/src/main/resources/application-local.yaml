@@ -1,0 +1,5 @@
+payments-service:
+  url: http://localhost:9090
+order-service:
+  url:
+    http://localhost:9091

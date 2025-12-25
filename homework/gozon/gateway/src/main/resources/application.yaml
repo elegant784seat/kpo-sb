@@ -1,0 +1,19 @@
+server:
+  port: 8080
+payments-service:
+  url: "http://payments-service:9090"
+order-service:
+  url: "http://order-service:9091"
+
+springdoc:
+  api-docs:
+    path: /api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    operations-sorter: method
+    tags-sorter: alpha
+    doc-expansion: none
+    display-request-duration: true
+  show-actuator: true
