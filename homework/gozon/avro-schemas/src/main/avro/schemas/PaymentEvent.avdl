@@ -1,0 +1,16 @@
+@namespace("com.hse.kafka.avro.event")
+protocol PaymentEventProtocol {
+
+    record PaymentEventAvro{
+        int accountId;
+        double amount;
+        long orderId;
+        PaymentStatusAvro status;
+        @logicalType("timestamp-millis")
+        long createdAt;
+    }
+
+    enum PaymentStatusAvro {
+        PENDING,APPROVED, CANCELLED
+    }
+}

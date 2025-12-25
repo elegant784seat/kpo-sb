@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://payments-service-db:5433/payments-service
+  kafka:
+    bootstrap-servers: kafka:29092

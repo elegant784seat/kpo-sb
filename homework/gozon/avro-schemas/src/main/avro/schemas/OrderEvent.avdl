@@ -1,0 +1,15 @@
+@namespace("com.hse.kafka.avro.event")
+protocol OrderEventProtocol {
+    enum OrderStatusAvro{
+        NEW, FINISHED, CANCELLED
+    }
+
+    record OrderCreatedEventAvro {
+        long orderId;
+        OrderStatusAvro status;
+        int userId;
+        double amount;
+        @logicalType("timestamp-millis")
+        long createdAt;
+    }
+}
